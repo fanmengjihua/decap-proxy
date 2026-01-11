@@ -12,11 +12,10 @@
   },
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.10.15",
+    "@vitest/runner": "^3.2.0",
+    "@vitest/snapshot": "^3.2.0",
     "typescript": "^5.9.3",
     "vitest": "~3.2.0",
-    "wrangler": "^4.45.0",
-    "@vitest/runner": "^3.2.0",
-    "@vitest/snapshot": "^3.2.0"
-  },
-  "dependencies": {}
+    "wrangler": "^4.45.0"
+  }
 }
