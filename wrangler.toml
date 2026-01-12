@@ -1,0 +1,6 @@
+name = "decap-proxy"
+main = "src/index.ts"
+compatibility_date = "2025-11-17"
+
+workers_dev = false
+route = { pattern = "admin.125929.xyz", zone_name = "125929.xyz", custom_domain = true }
