@@ -38,7 +38,7 @@ const handleAuth = async (url: URL, env: Env) => {
 		state: randomHex(4), // 4 bytes -> 8 hex chars
 	});
 
-	return new Response(null, { headers: { location: authorizationUri }, status: 301 });
+	return new Response(null, { headers: { location: authorizationUri }, status: 302 });
 };
 
 const callbackScriptResponse = (status: string, token: string) => {
