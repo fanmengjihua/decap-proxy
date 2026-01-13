@@ -43,7 +43,15 @@ export class OAuthClient {
 			}),
 		});
 
+		if (!response.ok) {
+			const errorData = await response.json();
+			throw new Error(`GitHub OAuth error: ${errorData.error_description || errorData.error || 'Unknown error'}`);
+		}
+
 		const json = (await response.json()) as { access_token: string };
+		if (!json.access_token) {
+			throw new Error('GitHub OAuth error: No access token received');
+		}
 		return json.access_token;
 	}
 }
